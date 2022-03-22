@@ -1,0 +1,9 @@
+SegmentFOV:
+    1655, delete, parameters = obj.parameters.segmentation;
+
+OptimizeScaleFactors:
+    5180, 并行时，需要合并
+
+function defaults = DefaultSummationParameters()
+    defaults(end+1,:) = {'dcIndsForSummation',  'array', 17:40};       % The indices for the data channels to use for summation
+    ##need to check all the places that use 'dcIndsForSummation'
