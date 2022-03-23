@@ -37,7 +37,7 @@ parameters["imageExt"]             = 'tif'
 parameters["n_jobs"] = 1
 parameters["verbose"] = False
 parameters["keepInterFiles"] = True
-parameters['aControl'] = "i"   ## All: mwodscpfnrilbu'
+parameters['aControl'] = "mwodscpfnrilbu"   ## All: mwodscpfnrilbu'
 ## Run the merfish scheduler
 # define which analysis to perform:
 # m = decoder;   w = warp/preprocess;    o = optimize;             d = decode;

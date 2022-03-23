@@ -59,12 +59,12 @@ n_worker = 1
 PageBreak()
 ## Load and parse ncRNAs
 if not os.path.exists(rRNAtRNAPath):
-    print('Loading: ',ncRNAPath)
     print('Start at: ', tic(1))
+    print('Loading: ',ncRNAPath)
     st = tic(0)
     ncRNAs = fastaread(ncRNAPath)
     print('Found ', len(ncRNAs), ' sequences')
-    print('... completed in', toc(st), "s" )
+    print('...completed in', toc(st), "s" )
 
     # Parse out 'gene_biotype'
     biotypes = {}
@@ -93,7 +93,7 @@ else:
     st = tic(0)
     rRNAtRNA = fastaread(rRNAtRNAPath)
     print('Loaded ',len(rRNAtRNA), ' sequences')
-    print('... completed in', toc(st), "s" )
+    print('...completed in', toc(st), "s" )
 
 ## ------------------------------------------------------------------------
 #  Build transcriptome object: This object collects information about
@@ -113,7 +113,7 @@ else:
     # Load transcriptome if it already exists
     transcriptome = Transcriptome.Load(transcriptomePath)
     print('Loaded ', transcriptome.numTranscripts, ' sequences')
-    print('... completed in', toc(st), "s")
+    print('...completed in', toc(st), "s")
 
 ## ------------------------------------------------------------------------
 # Build specificity tables:  These tables are used to identify (and
@@ -166,7 +166,7 @@ else:
         isoSpecificityTables.append(OTTable.Load(table_file_i,verbose=False, mapType = "OTMap2"))
 
     print('Loaded ', len(isoSpecificityTables), ' tables')
-    print('... completed in',toc(st), "s")
+    print('...completed in',toc(st), "s")
 
 ## Build total specificity table --- this table contains a penalty associated
 #   with all possible sequences in the transcriptome
@@ -236,7 +236,7 @@ else:
     st = tic(99)
     trDesigner_file = os.path.join(trDesignerPath,"trDesigner.pkl")
     trDesigner = TRDesigner.Load(trDesigner_file)
-    print('... completed in', toc(st), "s")
+    print('...completed in', toc(st), "s")
 
 ## ------------------------------------------------------------------------
 # Create target regions for a specific set of probe properties
@@ -265,7 +265,7 @@ else:
     print("Loading TargetRegions object from ", trRegionsPath)
     st = tic(99)
     targetRegions = TargetRegions.Load(trRegionsPath)
-    print('... completed in', toc(st), "s")
+    print('...completed in', toc(st), "s")
 
 ##########################################################################################
 ## ------------------------------------------------------------------------

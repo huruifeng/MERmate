@@ -1,6 +1,4 @@
 # This is a main entrance for running functions.
-##
-#3 GitHub Token: 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, Expire: 01292022
 
 from version import __version__
 
@@ -8,7 +6,7 @@ import os
 
 def print_logo():
     ## http://www.patorjk.com/software/taag/#p=display&f=Crazy&t=MERmate
-    # Use a breakpoint in the code line below to debug your script.
+
     ver_str =" MERmate version: "+ __version__ + " "
     print("#"* int(31-len(ver_str)/2) + ver_str + "#"*int(31-len(ver_str)/2))
     print("    __  __   _____   ____                        _            ")
