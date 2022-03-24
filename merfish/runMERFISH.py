@@ -8,13 +8,12 @@ from utils.funcs import PageBreak, tic, toc
 
 parameters = {}
 ## initialize data paths
-parameters["experimentPath"] = 'F:/Harvard_BWH/projects/1001_MERFISH/MERmate/examples/2021_08_02_U2OS_groupA'
+parameters["experimentPath"] = 'F:/Harvard_BWH/projects/1001_MERFISH/MERmate/examples/2021_08_02_U2OS_groupA_6fovs'
 
 ## initialize merfish analysis paths. This variables are harcoded, variable names should not be changed
 # raw data path
 parameters["rawDataPath"] = os.path.join(parameters["experimentPath"], 'dave60x')
 parameters["normalizedDataPath"] =os.path.join(parameters["experimentPath"], 'normalized_data')     # normalize data path,
-parameters["scratchPath"] = os.path.join(parameters["normalizedDataPath"], 'scratch')               # location of scratch directory
 
 parameters["settingsPath"] = os.path.join(parameters["rawDataPath"], 'settings')
 parameters["abundDataPath"] = os.path.join(parameters["settingsPath"],'FPKMDataPublished.csv')   # U2OS Bulk RNAseq data, from Moffit et al, PNAS, 2016
@@ -46,13 +45,7 @@ parameters['aControl'] = "mwodscpfnrilbu"   ## All: mwodscpfnrilbu'
 # b = barcode metadata; u = doUblet score
 
 ## Initialize file to save the output from merfish run
-# Create scratch folder for temp files
 PageBreak()
-print('Creating scratch folder for temp files')
-if not os.path.exists(parameters["scratchPath"]):
-     os.makedirs(parameters["scratchPath"],exist_ok=True)
-     print('...Created ',parameters["scratchPath"])
-
 print('Creating MERFISHDecoder for',parameters["rawDataPath"])
 print('...Normalized data will be saved in', parameters["normalizedDataPath"])
 scriptTimer = tic()
