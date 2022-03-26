@@ -8,7 +8,7 @@ from utils.funcs import PageBreak, tic, toc
 
 parameters = {}
 ## initialize data paths
-parameters["experimentPath"] = 'F:/Harvard_BWH/projects/1001_MERFISH/MERmate/examples/2021_08_02_U2OS_groupA_6fovs'
+parameters["experimentPath"] = 'F:/Harvard_BWH/projects/1001_MERFISH/MERmate/examples/2021_08_02_U2OS_groupA'
 
 ## initialize merfish analysis paths. This variables are harcoded, variable names should not be changed
 # raw data path
@@ -34,7 +34,7 @@ parameters["overwrite"]            = True
 parameters["hal_version"]          = 'hal2'
 parameters["imageExt"]             = 'tif'
 parameters["n_jobs"] = 1
-parameters["verbose"] = False
+parameters["verbose"] = True
 parameters["keepInterFiles"] = True
 parameters['aControl'] = "mwodscpfnrilbu"   ## All: mwodscpfnrilbu'
 ## Run the merfish scheduler
