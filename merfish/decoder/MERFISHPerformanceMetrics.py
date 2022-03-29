@@ -155,7 +155,7 @@ def MERFISHPerformanceMetrics(normalizedDataPath,mDecoder, **kwargs):
         print('...found',len(commonNames),'values that overlap with codebook entries')
     else:
         PageBreak()
-        print('No abundance data provided.')
+        error('[Error]: No abundance data provided.')
 
 
     # ------------------------------------------------------------------------
@@ -629,7 +629,7 @@ def MERFISHPerformanceMetrics(normalizedDataPath,mDecoder, **kwargs):
     fig.add_subplot(2,4,6)
     One2Zero_mean = np.nanmean(normalizedOne2Zero,0)
     One2Zero_mean[~np.isfinite(One2Zero_mean)] = np.nan
-    plt.bar(np.arange(len(One2Zero_mean)),height=One2Zero_mean, color='blue')
+    plt.bar(np.arange(1,len(One2Zero_mean)+1),height=One2Zero_mean, color='blue')
     plt.ylabel('Error rate')
     plt.xlabel('Bit')
     plt.title(f'1 $\\rightarrow$ 0: {np.nanmean(One2Zero_mean):.2f}')
@@ -639,7 +639,7 @@ def MERFISHPerformanceMetrics(normalizedDataPath,mDecoder, **kwargs):
     fig.add_subplot(2,4,7)
     Zero2One_mean = np.nanmean(normalizedZero2One, 0)
     Zero2One_mean[~np.isfinite(Zero2One_mean)] = np.nan
-    plt.bar(np.arange(len(Zero2One_mean)), height=Zero2One_mean, color='blue')
+    plt.bar(np.arange(1,len(Zero2One_mean)+1), height=Zero2One_mean, color='blue')
     plt.ylabel('Error rate')
     plt.xlabel('Bit')
     plt.title(f'0 $\\rightarrow$ 1: {np.nanmean(Zero2One_mean):.2f}')

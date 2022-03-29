@@ -563,7 +563,7 @@ class FoundFeature:
             cpObj.__dict__[f] = self.__dict__[f]
 
         # Create new uID
-        cpObj.uID = uuid.uuid4()
+        cpObj.uID = str(uuid.uuid4())
         return cpObj
 
     # -------------------------------------------------------------------------

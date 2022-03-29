@@ -286,7 +286,7 @@ def MERFISHScheduler(**kwargs):
         print('[5/13] Combine features...')
         ## Load MERFISH Decoder
         mDecoder = MERFISHDecoder.Load(normalizedDataPath, "mDecoder")
-        mDecoder.overwrite = False  # Allow graceful restart of processes
+        mDecoder.overwrite = True  # Allow graceful restart of processes
 
         scriptTimer = tic()
 
@@ -367,7 +367,7 @@ def MERFISHScheduler(**kwargs):
         print('[8/13] Calculate performance...')
         scriptTimer = tic()
         mDecoder = MERFISHDecoder.Load(normalizedDataPath, "mDecoder")
-        mDecoder.overwrite = False  # Allow graceful restart of processes
+        mDecoder.overwrite = True  # Allow graceful restart of processes
 
         # Confirm validity of all barcode files
         bFiles,_ = BuildFileStructure(os.path.join(normalizedDataPath,'barcodes','barcode_fov'),
