@@ -930,9 +930,9 @@ class MERFISHDecoder:
         # Check for the existance of the feature reports
         reportsPath = os.path.join(self.normalizedDataPath,'reports')
         if not os.path.exists(os.path.join(reportsPath,'countsPerCellExactIn.csv')) or \
-                not os.path.exists(os.path.join(reportsPath, 'countsPerCellExactIn.csv')) or \
-                not os.path.exists(os.path.join(reportsPath, 'countsPerCellExactIn.csv')) or \
-                not os.path.exists(os.path.join(reportsPath, 'countsPerCellExactIn.csv')):
+                not os.path.exists(os.path.join(reportsPath, 'countsPerCellCorrectedIn.csv')) or \
+                not os.path.exists(os.path.join(reportsPath, 'countsPerCellExactOut.csv')) or \
+                not os.path.exists(os.path.join(reportsPath, 'countsPerCellCorrectedOut.csv')):
             error('[Error]:missingData - The feature counts must be calculated first.')
 
         # Load feature counts
